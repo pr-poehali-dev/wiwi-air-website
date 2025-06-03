@@ -3,54 +3,54 @@ import Icon from "@/components/ui/icon";
 
 const features = [
   {
+    icon: "Truck",
+    title: "Быстрая доставка",
+    description:
+      "Доставляем по всей России от 1 дня. Пункты выдачи в каждом районе, курьерская доставка до двери",
+  },
+  {
     icon: "Shield",
-    title: "Безопасность превыше всего",
+    title: "Гарантия качества",
     description:
-      "Современный флот самолётов с высочайшими стандартами безопасности и регулярным техническим обслуживанием",
+      "Проверяем каждый товар перед отправкой. Возврат и обмен в течение 14 дней без лишних вопросов",
   },
   {
-    icon: "Clock",
-    title: "Пунктуальность",
+    icon: "CreditCard",
+    title: "Удобная оплата",
     description:
-      "Более 95% рейсов прибывают вовремя. Мы ценим ваше время и придерживаемся расписания",
+      "Оплачивайте как удобно: картой, наличными при получении, в рассрочку или частями",
   },
   {
-    icon: "Heart",
-    title: "Комфорт в полёте",
+    icon: "Users",
+    title: "Миллионы продавцов",
     description:
-      "Удобные кресла, качественное питание и развлекательная система для приятного путешествия",
-  },
-  {
-    icon: "Globe",
-    title: "Глобальная сеть",
-    description:
-      "Более 150 направлений по всему миру с удобными стыковками и гибким расписанием",
+      "Работаем с проверенными поставщиками со всего мира. Лучшие цены от производителей",
   },
   {
     icon: "Headphones",
     title: "Поддержка 24/7",
     description:
-      "Круглосуточная служба поддержки на русском языке для помощи в любых вопросах",
+      "Консультанты онлайн круглосуточно. Помогаем с выбором, заказом и решением любых вопросов",
   },
   {
-    icon: "Zap",
-    title: "Быстрая регистрация",
+    icon: "Percent",
+    title: "Постоянные скидки",
     description:
-      "Онлайн-регистрация за 24 часа, мобильные посадочные талоны и быстрый проход в аэропорту",
+      "Акции каждый день, персональные скидки, кэшбэк с покупок и программа лояльности",
   },
 ];
 
-const Features = () => {
+const MarketplaceFeatures = () => {
   return (
-    <section className="py-16 bg-slate-50" id="about">
+    <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-slate-800 mb-4 font-montserrat">
-            Почему выбирают WiwiAir
+          <h2 className="text-4xl font-bold text-gray-800 mb-4 font-montserrat">
+            Почему выбирают нас
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Мы создаём незабываемые впечатления от путешествий, объединяя
-            надёжность, комфорт и персональный подход к каждому пассажиру
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Мы создаём удобный шопинг-опыт для миллионов покупателей, объединяя
+            лучшие товары, выгодные цены и качественный сервис
           </p>
         </div>
 
@@ -61,7 +61,7 @@ const Features = () => {
               className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white"
             >
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-wb-purple to-wb-pink rounded-full flex items-center justify-center mx-auto mb-6">
                   <Icon
                     name={feature.icon as any}
                     size={32}
@@ -69,11 +69,11 @@ const Features = () => {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-800 mb-4 font-montserrat">
+                <h3 className="text-xl font-bold text-gray-800 mb-4 font-montserrat">
                   {feature.title}
                 </h3>
 
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>
@@ -82,27 +82,29 @@ const Features = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 bg-gradient-to-r from-sky-500 to-blue-600 rounded-2xl p-12 text-white">
+        <div className="mt-16 bg-gradient-to-r from-wb-purple to-wb-pink rounded-2xl p-12 text-white">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold font-montserrat mb-2">15+</div>
-              <div className="text-blue-100">лет на рынке</div>
+              <div className="text-4xl font-bold font-montserrat mb-2">
+                150М+
+              </div>
+              <div className="text-purple-100">товаров в каталоге</div>
             </div>
             <div>
               <div className="text-4xl font-bold font-montserrat mb-2">
-                150+
+                300К+
               </div>
-              <div className="text-blue-100">направлений</div>
+              <div className="text-purple-100">продавцов</div>
             </div>
             <div>
               <div className="text-4xl font-bold font-montserrat mb-2">
-                50M+
+                50М+
               </div>
-              <div className="text-blue-100">довольных пассажиров</div>
+              <div className="text-purple-100">довольных покупателей</div>
             </div>
             <div>
-              <div className="text-4xl font-bold font-montserrat mb-2">95%</div>
-              <div className="text-blue-100">рейсов вовремя</div>
+              <div className="text-4xl font-bold font-montserrat mb-2">99%</div>
+              <div className="text-purple-100">положительных отзывов</div>
             </div>
           </div>
         </div>
@@ -111,4 +113,4 @@ const Features = () => {
   );
 };
 
-export default Features;
+export default MarketplaceFeatures;

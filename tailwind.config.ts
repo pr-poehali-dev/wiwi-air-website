@@ -56,18 +56,12 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Aviation theme colors
-        sky: {
-          50: "#f0f9ff",
-          100: "#e0f2fe",
-          200: "#bae6fd",
-          300: "#7dd3fc",
-          400: "#38bdf8",
-          500: "#0ea5e9",
-          600: "#0284c7",
-          700: "#0369a1",
-          800: "#075985",
-          900: "#0c4a6e",
+        // Wildberries theme colors
+        wb: {
+          purple: "#6A1B9A",
+          pink: "#E91E63",
+          light: "#F3E5F5",
+          dark: "#4A148C",
         },
       },
       borderRadius: {

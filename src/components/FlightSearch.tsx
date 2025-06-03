@@ -1,207 +1,91 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import Icon from "@/components/ui/icon";
 
-const FlightSearch = () => {
-  const [tripType, setTripType] = useState("roundtrip");
+const categories = [
+  { name: "Женщинам", icon: "Shirt", color: "from-pink-400 to-pink-600" },
+  { name: "Мужчинам", icon: "User", color: "from-blue-400 to-blue-600" },
+  { name: "Детям", icon: "Baby", color: "from-green-400 to-green-600" },
+  { name: "Обувь", icon: "Footprints", color: "from-amber-400 to-amber-600" },
+  { name: "Красота", icon: "Sparkles", color: "from-purple-400 to-purple-600" },
+  { name: "Дом", icon: "Home", color: "from-emerald-400 to-emerald-600" },
+  { name: "Спорт", icon: "Dumbbell", color: "from-red-400 to-red-600" },
+  {
+    name: "Электроника",
+    icon: "Smartphone",
+    color: "from-indigo-400 to-indigo-600",
+  },
+];
 
+const ProductCatalog = () => {
   return (
-    <section className="py-16 bg-slate-50" id="flights">
-      <div className="max-w-6xl mx-auto px-4">
-        <Card className="shadow-2xl border-0">
-          <CardHeader className="bg-gradient-to-r from-sky-500 to-blue-600 text-white rounded-t-lg">
-            <CardTitle className="text-2xl font-bold text-center font-montserrat">
-              <Icon name="Search" size={24} className="inline mr-2" />
-              Поиск авиабилетов
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="p-8">
-            {/* Trip Type Selection */}
-            <div className="flex gap-4 mb-8">
-              <label className="flex items-center space-x-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="tripType"
-                  value="roundtrip"
-                  checked={tripType === "roundtrip"}
-                  onChange={(e) => setTripType(e.target.value)}
-                  className="text-sky-500"
-                />
-                <span>Туда и обратно</span>
-              </label>
-              <label className="flex items-center space-x-2 cursor-pointer">
-                <input
-                  type="radio"
-                  name="tripType"
-                  value="oneway"
-                  checked={tripType === "oneway"}
-                  onChange={(e) => setTripType(e.target.value)}
-                  className="text-sky-500"
-                />
-                <span>В одну сторону</span>
-              </label>
-            </div>
+    <section className="py-12 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4 font-montserrat">
+            Каталог товаров
+          </h2>
+          <p className="text-lg text-gray-600">
+            Более 150 миллионов товаров в одном месте
+          </p>
+        </div>
 
-            {/* Search Form */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              {/* From */}
-              <div className="space-y-2">
-                <Label htmlFor="from" className="text-slate-700 font-semibold">
-                  Откуда
-                </Label>
-                <div className="relative">
-                  <Icon
-                    name="MapPin"
-                    size={18}
-                    className="absolute left-3 top-3 text-slate-400"
-                  />
-                  <Input
-                    id="from"
-                    placeholder="Москва (SVO)"
-                    className="pl-10 h-12 border-slate-200 focus:border-sky-500"
-                  />
-                </div>
-              </div>
-
-              {/* To */}
-              <div className="space-y-2">
-                <Label htmlFor="to" className="text-slate-700 font-semibold">
-                  Куда
-                </Label>
-                <div className="relative">
-                  <Icon
-                    name="MapPin"
-                    size={18}
-                    className="absolute left-3 top-3 text-slate-400"
-                  />
-                  <Input
-                    id="to"
-                    placeholder="Стамбул (IST)"
-                    className="pl-10 h-12 border-slate-200 focus:border-sky-500"
-                  />
-                </div>
-              </div>
-
-              {/* Departure Date */}
-              <div className="space-y-2">
-                <Label
-                  htmlFor="departure"
-                  className="text-slate-700 font-semibold"
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6">
+          {categories.map((category, index) => (
+            <Card
+              key={index}
+              className="group cursor-pointer border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+            >
+              <CardContent className="p-0">
+                <div
+                  className={`bg-gradient-to-br ${category.color} h-32 flex items-center justify-center relative overflow-hidden`}
                 >
-                  Дата вылета
-                </Label>
-                <div className="relative">
                   <Icon
-                    name="Calendar"
-                    size={18}
-                    className="absolute left-3 top-3 text-slate-400"
+                    name={category.icon as any}
+                    size={48}
+                    className="text-white group-hover:scale-110 transition-transform duration-300"
                   />
-                  <Input
-                    id="departure"
-                    type="date"
-                    className="pl-10 h-12 border-slate-200 focus:border-sky-500"
-                  />
+                  <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-              </div>
-
-              {/* Return Date */}
-              {tripType === "roundtrip" && (
-                <div className="space-y-2">
-                  <Label
-                    htmlFor="return"
-                    className="text-slate-700 font-semibold"
-                  >
-                    Дата возврата
-                  </Label>
-                  <div className="relative">
-                    <Icon
-                      name="Calendar"
-                      size={18}
-                      className="absolute left-3 top-3 text-slate-400"
-                    />
-                    <Input
-                      id="return"
-                      type="date"
-                      className="pl-10 h-12 border-slate-200 focus:border-sky-500"
-                    />
-                  </div>
+                <div className="p-4 text-center">
+                  <h3 className="font-bold text-gray-800 font-montserrat">
+                    {category.name}
+                  </h3>
+                  <p className="text-sm text-gray-500 mt-1">Тысячи товаров</p>
                 </div>
-              )}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
 
-              {/* Passengers */}
-              <div className="space-y-2">
-                <Label
-                  htmlFor="passengers"
-                  className="text-slate-700 font-semibold"
-                >
-                  Пассажиры
-                </Label>
-                <Select>
-                  <SelectTrigger className="h-12 border-slate-200 focus:border-sky-500">
-                    <Icon
-                      name="Users"
-                      size={18}
-                      className="mr-2 text-slate-400"
-                    />
-                    <SelectValue placeholder="1 взрослый" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="1">1 взрослый</SelectItem>
-                    <SelectItem value="2">2 взрослых</SelectItem>
-                    <SelectItem value="3">3 взрослых</SelectItem>
-                    <SelectItem value="4">4+ взрослых</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              {/* Class */}
-              <div className="space-y-2">
-                <Label htmlFor="class" className="text-slate-700 font-semibold">
-                  Класс
-                </Label>
-                <Select>
-                  <SelectTrigger className="h-12 border-slate-200 focus:border-sky-500">
-                    <Icon
-                      name="Crown"
-                      size={18}
-                      className="mr-2 text-slate-400"
-                    />
-                    <SelectValue placeholder="Эконом" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="economy">Эконом</SelectItem>
-                    <SelectItem value="business">Бизнес</SelectItem>
-                    <SelectItem value="first">Первый класс</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+        {/* Popular brands */}
+        <div className="mt-12">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6 text-center font-montserrat">
+            Популярные бренды
+          </h3>
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+            <div className="bg-white px-6 py-4 rounded-lg shadow-md font-bold text-gray-700">
+              NIKE
             </div>
-
-            {/* Search Button */}
-            <div className="text-center">
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 px-12 py-3 text-lg font-semibold"
-              >
-                <Icon name="Search" size={20} className="mr-2" />
-                Найти рейсы
-              </Button>
+            <div className="bg-white px-6 py-4 rounded-lg shadow-md font-bold text-gray-700">
+              ADIDAS
             </div>
-          </CardContent>
-        </Card>
+            <div className="bg-white px-6 py-4 rounded-lg shadow-md font-bold text-gray-700">
+              ZARA
+            </div>
+            <div className="bg-white px-6 py-4 rounded-lg shadow-md font-bold text-gray-700">
+              H&M
+            </div>
+            <div className="bg-white px-6 py-4 rounded-lg shadow-md font-bold text-gray-700">
+              APPLE
+            </div>
+            <div className="bg-white px-6 py-4 rounded-lg shadow-md font-bold text-gray-700">
+              SAMSUNG
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default FlightSearch;
+export default ProductCatalog;

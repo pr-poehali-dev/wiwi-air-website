@@ -2,186 +2,234 @@ import Icon from "@/components/ui/icon";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-800 text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-sky-500 rounded-full flex items-center justify-center">
-                <Icon name="Plane" size={24} className="text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-wb-purple to-wb-pink rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">W</span>
               </div>
-              <span className="text-3xl font-bold font-montserrat">
-                WiwiAir
+              <span className="text-2xl font-bold font-montserrat">
+                Wildberries
               </span>
             </div>
-            <p className="text-slate-300 text-lg leading-relaxed mb-6 max-w-md">
-              Ваш надёжный партнёр в небе. Комфортные перелёты, выгодные цены и
-              высококлассный сервис по всему миру.
+            <p className="text-gray-300 text-sm leading-relaxed mb-6 max-w-md">
+              Интернет-магазин модной одежды, обуви и аксессуаров. Более 150
+              миллионов товаров для всей семьи.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-wb-purple transition-colors"
               >
                 <Icon name="Facebook" size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors"
-              >
-                <Icon name="Twitter" size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-wb-purple transition-colors"
               >
                 <Icon name="Instagram" size={20} />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center hover:bg-sky-500 transition-colors"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-wb-purple transition-colors"
               >
                 <Icon name="Youtube" size={20} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Покупателям */}
           <div>
             <h3 className="text-lg font-bold font-montserrat mb-6">
-              Быстрые ссылки
+              Покупателям
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-sm">
               <li>
                 <a
                   href="#"
-                  className="text-slate-300 hover:text-sky-400 transition-colors"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
                 >
-                  Поиск рейсов
+                  Как сделать заказ
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-slate-300 hover:text-sky-400 transition-colors"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
                 >
-                  Управление бронированием
+                  Способы оплаты
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-slate-300 hover:text-sky-400 transition-colors"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
                 >
-                  Онлайн регистрация
+                  Доставка
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-slate-300 hover:text-sky-400 transition-colors"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
                 >
-                  Статус рейса
+                  Возврат товара
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-slate-300 hover:text-sky-400 transition-colors"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
                 >
-                  Багаж
+                  Правила продажи
                 </a>
               </li>
               <li>
                 <a
                   href="#"
-                  className="text-slate-300 hover:text-sky-400 transition-colors"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
                 >
-                  Услуги в полёте
+                  Публичная оферта
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Партнёрам */}
+          <div>
+            <h3 className="text-lg font-bold font-montserrat mb-6">
+              Партнёрам
+            </h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
+                >
+                  Продавайте на WB
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
+                >
+                  Курьерам
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
+                >
+                  Пункты выдачи
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
+                >
+                  Франшиза
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-300 hover:text-wb-pink transition-colors"
+                >
+                  Реклама на сайте
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Контакты */}
           <div>
             <h3 className="text-lg font-bold font-montserrat mb-6">Контакты</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 text-sm">
               <div className="flex items-start space-x-3">
-                <Icon name="Phone" size={18} className="text-sky-400 mt-1" />
+                <Icon name="Phone" size={18} className="text-wb-pink mt-1" />
                 <div>
-                  <p className="text-slate-300">8 800 123-45-67</p>
-                  <p className="text-sm text-slate-400">Бесплатно по России</p>
+                  <p className="text-gray-300">8 800 505-87-87</p>
+                  <p className="text-gray-400">Бесплатно по России</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Icon name="Mail" size={18} className="text-sky-400 mt-1" />
+                <Icon name="Mail" size={18} className="text-wb-pink mt-1" />
                 <div>
-                  <p className="text-slate-300">info@wiwiair.com</p>
-                  <p className="text-sm text-slate-400">Служба поддержки</p>
+                  <p className="text-gray-300">info@wildberries.ru</p>
+                  <p className="text-gray-400">Служба поддержки</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
-                <Icon name="Clock" size={18} className="text-sky-400 mt-1" />
+                <Icon name="Clock" size={18} className="text-wb-pink mt-1" />
                 <div>
-                  <p className="text-slate-300">24/7</p>
-                  <p className="text-sm text-slate-400">Круглосуточно</p>
+                  <p className="text-gray-300">Ежедневно</p>
+                  <p className="text-gray-400">с 7:00 до 21:00</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="border-t border-slate-700 mt-12 pt-8">
-          <div className="max-w-md">
-            <h3 className="text-lg font-bold font-montserrat mb-4">
-              Подписка на новости
-            </h3>
-            <p className="text-slate-300 mb-4">
-              Получайте лучшие предложения и новости первыми
-            </p>
-            <div className="flex">
-              <input
-                type="email"
-                placeholder="Ваш email"
-                className="flex-1 px-4 py-2 bg-slate-700 border border-slate-600 rounded-l-lg focus:outline-none focus:border-sky-500 text-white"
-              />
-              <button className="bg-sky-500 hover:bg-sky-600 px-6 py-2 rounded-r-lg transition-colors">
-                <Icon name="Send" size={18} />
-              </button>
+        {/* App Download */}
+        <div className="border-t border-gray-800 mt-12 pt-8">
+          <div className="flex items-center justify-center space-x-4">
+            <span className="text-gray-300">Скачайте наше приложение:</span>
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                className="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <div className="flex items-center space-x-2">
+                  <Icon name="Smartphone" size={20} className="text-wb-pink" />
+                  <span className="text-sm">App Store</span>
+                </div>
+              </a>
+              <a
+                href="#"
+                className="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 transition-colors"
+              >
+                <div className="flex items-center space-x-2">
+                  <Icon name="Smartphone" size={20} className="text-wb-pink" />
+                  <span className="text-sm">Google Play</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-slate-700">
+      <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-slate-400 text-sm">
-              © 2024 WiwiAir. Все права защищены.
+            <p className="text-gray-400 text-sm">
+              © 2024 Wildberries. Все права защищены.
             </p>
             <div className="flex space-x-6 text-sm">
               <a
                 href="#"
-                className="text-slate-400 hover:text-sky-400 transition-colors"
+                className="text-gray-400 hover:text-wb-pink transition-colors"
               >
-                Условия использования
+                Пользовательское соглашение
               </a>
               <a
                 href="#"
-                className="text-slate-400 hover:text-sky-400 transition-colors"
+                className="text-gray-400 hover:text-wb-pink transition-colors"
               >
                 Политика конфиденциальности
               </a>
               <a
                 href="#"
-                className="text-slate-400 hover:text-sky-400 transition-colors"
+                className="text-gray-400 hover:text-wb-pink transition-colors"
               >
-                Возврат билетов
+                Обработка персональных данных
               </a>
             </div>
           </div>

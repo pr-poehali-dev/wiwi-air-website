@@ -3,66 +3,80 @@ import Icon from "@/components/ui/icon";
 
 const Hero = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-sky-400 via-blue-500 to-indigo-600 overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl"></div>
-      </div>
+    <section className="bg-gradient-to-r from-wb-light to-white py-8">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Main banner */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          {/* Large banner */}
+          <div className="lg:col-span-2 relative bg-gradient-to-r from-wb-purple to-wb-pink rounded-2xl p-8 text-white overflow-hidden">
+            <div className="relative z-10">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 font-montserrat">
+                Мега скидки
+                <span className="block text-yellow-300">до 80%</span>
+              </h1>
+              <p className="text-xl mb-6 text-purple-100">
+                На 2 миллиона товаров от проверенных продавцов
+              </p>
+              <Button
+                size="lg"
+                className="bg-white text-wb-purple hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
+              >
+                <Icon name="Percent" size={20} className="mr-2" />
+                Смотреть скидки
+              </Button>
+            </div>
+            <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full"></div>
+            <div className="absolute -right-20 -bottom-10 w-60 h-60 bg-white/5 rounded-full"></div>
+          </div>
 
-      {/* Clouds animation */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-0 animate-pulse">
-          <Icon name="Cloud" size={60} className="text-white" />
+          {/* Side banners */}
+          <div className="space-y-6">
+            <div className="bg-gradient-to-br from-pink-100 to-pink-200 rounded-xl p-6 text-center">
+              <Icon
+                name="Truck"
+                size={40}
+                className="mx-auto mb-3 text-wb-pink"
+              />
+              <h3 className="font-bold text-gray-800 mb-2">Быстрая доставка</h3>
+              <p className="text-sm text-gray-600">От 1 дня по всей России</p>
+            </div>
+            <div className="bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl p-6 text-center">
+              <Icon
+                name="Shield"
+                size={40}
+                className="mx-auto mb-3 text-wb-purple"
+              />
+              <h3 className="font-bold text-gray-800 mb-2">
+                Гарантия качества
+              </h3>
+              <p className="text-sm text-gray-600">Возврат в течение 14 дней</p>
+            </div>
+          </div>
         </div>
-        <div
-          className="absolute top-1/3 right-1/4 animate-pulse"
-          style={{ animationDelay: "1s" }}
-        >
-          <Icon name="Cloud" size={40} className="text-white" />
+
+        {/* Promo cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="bg-red-500 text-white rounded-xl p-4 text-center">
+            <Icon name="Zap" size={24} className="mx-auto mb-2" />
+            <div className="font-bold">Молниеносные скидки</div>
+            <div className="text-sm opacity-90">Каждый час</div>
+          </div>
+          <div className="bg-green-500 text-white rounded-xl p-4 text-center">
+            <Icon name="Gift" size={24} className="mx-auto mb-2" />
+            <div className="font-bold">Подарки</div>
+            <div className="text-sm opacity-90">К покупкам</div>
+          </div>
+          <div className="bg-blue-500 text-white rounded-xl p-4 text-center">
+            <Icon name="Star" size={24} className="mx-auto mb-2" />
+            <div className="font-bold">Топ бренды</div>
+            <div className="text-sm opacity-90">Лучшие цены</div>
+          </div>
+          <div className="bg-orange-500 text-white rounded-xl p-4 text-center">
+            <Icon name="Clock" size={24} className="mx-auto mb-2" />
+            <div className="font-bold">24/7</div>
+            <div className="text-sm opacity-90">Поддержка</div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-        <div className="mb-6">
-          <Icon
-            name="Plane"
-            size={80}
-            className="mx-auto mb-4 text-white animate-bounce"
-          />
-        </div>
-
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 font-montserrat leading-tight">
-          Летайте с<span className="block text-yellow-300">WiwiAir</span>
-        </h1>
-
-        <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-2xl mx-auto">
-          Комфортные перелёты по всему миру. Надёжность, качество и лучшие цены
-          в одном месте.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button
-            size="lg"
-            className="bg-yellow-400 hover:bg-yellow-500 text-slate-800 px-8 py-3 text-lg font-semibold"
-          >
-            <Icon name="Search" size={20} className="mr-2" />
-            Найти рейс
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-white text-white hover:bg-white hover:text-sky-600 px-8 py-3 text-lg"
-          >
-            <Icon name="Calendar" size={20} className="mr-2" />
-            Управление бронированием
-          </Button>
-        </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <Icon name="ChevronDown" size={32} className="text-white opacity-70" />
       </div>
     </section>
   );

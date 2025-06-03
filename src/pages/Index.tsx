@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import FlightSearch from "@/components/FlightSearch";
-import Destinations from "@/components/Destinations";
-import Features from "@/components/Features";
+import ProductCatalog from "@/components/FlightSearch";
+import PopularProducts from "@/components/Destinations";
+import MarketplaceFeatures from "@/components/Features";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -10,9 +10,9 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <FlightSearch />
-      <Destinations />
-      <Features />
+      <ProductCatalog />
+      <PopularProducts />
+      <MarketplaceFeatures />
       <Footer />
     </div>
   );
